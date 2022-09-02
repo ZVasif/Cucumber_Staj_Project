@@ -31,6 +31,10 @@ public class LeftNav extends Parent{
     //****************************** CSP-3 ******************************//
 
 
+    //****************************** CSP-4 ******************************//
+    @FindBy(xpath = "(//span[text()='Fields'])[1]")
+    private WebElement fields;
+
 
 
     //****************************** CSP-5 ******************************//
@@ -46,6 +50,8 @@ public class LeftNav extends Parent{
 
 
 
+
+
     WebElement myElement;
     public void findAndClick (String strElement){
         switch (strElement){
@@ -53,6 +59,7 @@ public class LeftNav extends Parent{
             case "parameters":myElement=parameters;break;
             case "nationalities":myElement=nationalities;break;
             case "humanResources":myElement=humanResources;break;
+            case "fields":myElement=fields;break;
 
         }
         clickFunction(myElement);

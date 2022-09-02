@@ -50,7 +50,7 @@ public class Hooks {
         }
 
         // ekran görüntüsü al senaryo hatalı ise
-        GWD.quiteDriver();
+        GWD.quitDriver();
     }
 
     public String getBase64Screenshot()

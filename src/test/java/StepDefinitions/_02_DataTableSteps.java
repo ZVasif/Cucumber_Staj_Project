@@ -58,4 +58,9 @@ public class _02_DataTableSteps {
             fc.findAndClick(listElement.get(i));
         }
     }
+
+    @And("Success message should be displayed")
+    public void successMessageShouldBeDisplayed() {
+        dc.findAndContainsText("successMessage","success");
+    }
 }

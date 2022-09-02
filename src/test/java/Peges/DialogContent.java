@@ -64,6 +64,11 @@ public class DialogContent extends Parent {
     @FindBy(xpath = "//*[text()='Campus School']")
     private WebElement mainPage;
 
+    //**************************  CSP-4    **************************//
+
+    @FindBy(xpath = "//ms-add-button[@tooltip='GENERAL.BUTTON.ADD']//div//button")
+    private WebElement addButton2;
+
 
 
 
@@ -100,6 +105,8 @@ public class DialogContent extends Parent {
             case "deletebutton":myElement=deletebutton;break;
             case "deleteDialogbutton":myElement=deleteDialogbutton;break;
             case "mainPage":myElement=mainPage;break;
+
+            case "addButton2":myElement=addButton2;break;
 
 
         }
