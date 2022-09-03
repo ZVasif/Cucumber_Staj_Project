@@ -32,6 +32,8 @@ public class LeftNav extends Parent{
 
     //*************************** CSP-3 ***************************//
 
+    @FindBy(xpath = "(//span[text()='Document Types'])[1]")
+    private WebElement documentTypes;
 
     //*************************** CSP-4 ***************************//
     @FindBy(xpath = "(//span[text()='Fields'])[1]")
@@ -69,9 +71,13 @@ public class LeftNav extends Parent{
             case "parameters":myElement=parameters;break;
             case "nationalities":myElement=nationalities;break;
             case "humanResources":myElement=humanResources;break;
-            case "fields":myElement=fields;break;
             case "setupHumanResourse":myElement=setupHumanResourse;break;
             case "positionCategories":myElement=positionCategories;break;
+            //*************************** CSP-3 ***************************//
+            case "documentTypes":myElement=documentTypes;break;
+
+            //*************************** CSP-4 ***************************//
+            case "fields":myElement=fields;break;
 
             //*************************** CSP-7 ***************************//
             case "setupSchool":myElement=setupSchool;break;
