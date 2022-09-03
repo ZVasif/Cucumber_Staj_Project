@@ -23,6 +23,7 @@ Feature: Fields Functionality
       | searchBTN |
     And Click on the element in the Dialog
       | editButton |
+
     And User sending the keys in Dialog content
       | nameInput | <fieldName2> |
     And Click on the element in the Dialog
