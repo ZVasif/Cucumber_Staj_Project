@@ -4,8 +4,10 @@ package StepDefinitions;
 import Peges.DialogContent;
 import Peges.FormContect;
 import Peges.LeftNav;
+import Utilites.GWD;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
+import io.cucumber.java.en.Then;
 
 import java.util.List;
 
@@ -61,6 +63,8 @@ public class _02_DataTableSteps {
 
     @And("Success message should be displayed")
     public void successMessageShouldBeDisplayed() {
-        dc.findAndContainsText("successMessage","success");
+        dc.findAndContainsText("successMessage","successfully");
     }
+
+
 }

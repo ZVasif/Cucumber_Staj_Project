@@ -23,29 +23,37 @@ public class LeftNav extends Parent{
     @FindBy(xpath = "//span[text()='Nationalities']")
     private WebElement nationalities;
 
-    //****************************** CSP-1 ******************************//
+    //*************************** CSP-1 ***************************//
 
 
 
 
-    //****************************** CSP-3 ******************************//
+    //*************************** CSP-3 ***************************//
 
 
-    //****************************** CSP-4 ******************************//
+    //*************************** CSP-4 ***************************//
     @FindBy(xpath = "(//span[text()='Fields'])[1]")
     private WebElement fields;
 
 
 
-    //****************************** CSP-5 ******************************//
+    //*************************** CSP-5 ***************************//
 
 
 
-    //****************************** CSP-7 ******************************//
+    //*************************** CSP-7 ***************************//
+    @FindBy(xpath = "//*[text()='School Setup']")
+            private WebElement setupSchool;
+    @FindBy(xpath = "//*[text()='Locations']")
+            private WebElement locatoins;
+
+    //*************************** CSP-8 ***************************//
+    @FindBy(xpath = "//*[text()='Departments']")
+            private WebElement departments;
 
 
 
-    //****************************** CSP-9 ******************************//
+    //*************************** CSP-9 ***************************//
 
 
 
@@ -61,6 +69,11 @@ public class LeftNav extends Parent{
             case "humanResources":myElement=humanResources;break;
             case "fields":myElement=fields;break;
 
+            //*************************** CSP-7 ***************************//
+            case "setupSchool":myElement=setupSchool;break;
+            case "locatoins":myElement=locatoins;break;
+            //*************************** CSP-8 ***************************//
+            case "departments":myElement=departments;break;
         }
         clickFunction(myElement);
     }
