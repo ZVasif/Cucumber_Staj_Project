@@ -62,6 +62,10 @@ public class DialogContent extends Parent {
     @FindBy(xpath = "//*[text()='Campus School']")
     private WebElement mainPage;
 
+    //*************************CSP -2 *************************//
+    @FindBy(xpath = "(//ms-edit-button[contains(@class,'ng-star-inserted')]//button)[1]")
+    public WebElement attestationsEditBTN;
+
     //************************** CSP-4 **************************//
 
     @FindBy(xpath = "//ms-add-button[@tooltip='GENERAL.BUTTON.ADD']//div//button")
@@ -122,6 +126,8 @@ public class DialogContent extends Parent {
             case "deletebutton":myElement=deletebutton;break;
             case "deleteDialogbutton":myElement=deleteDialogbutton;break;
             case "mainPage":myElement=mainPage;break;
+            //***********************CSP -2 ********************************//
+            case "attestationsEditBTN":myElement=attestationsEditBTN; break;
 
             //************************** CSP-7 **************************//
             case "locationType":myElement=locationType;break;
