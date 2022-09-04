@@ -76,6 +76,16 @@ public class DialogContent extends Parent {
     @FindBy(xpath = "//td[contains(text(),'co+-1')]")
             private WebElement editText;
 
+    //**************************  CSP-11    **************************//
+    @FindBy(xpath="//ms-text-field[@formcontrolname='description']//input")
+    private WebElement descriptionName;
+
+    @FindBy(xpath="//ms-text-field[@placeholder='DISCOUNT.TITLE.DESCRIPTION']//input")
+    private WebElement descriptionName2;
+
+    @FindBy(xpath = "//ms-edit-button/button/span")
+    private WebElement addButton11;
+
 
 
 
@@ -96,6 +106,9 @@ public class DialogContent extends Parent {
 
            //**************************  CSP-7    **************************//
            case "capacity":myElement=capacity;break;
+           //**************************  CSP-11    **************************//
+           case "descriptionName":myElement=descriptionName;break;
+           case "descriptionName2":myElement=descriptionName2;break;
        }
 
 
@@ -122,6 +135,8 @@ public class DialogContent extends Parent {
             case "editButton":myElement=editButton;break;
             case "editText":myElement=editText;break;
 
+            //**************************  CSP-11    **************************//
+            case "addButton11":myElement=addButton11;break;
 
         }
         clickFunction(myElement);
