@@ -34,7 +34,7 @@ public class DialogContent extends Parent {
     private WebElement save;
     @FindBy(xpath = "//div[contains(text(),'successfully')]")
     private WebElement successMessage;
-    @FindBy(xpath = "(//ms-edit-button[@class='ng-star-inserted']//button)[1]")
+    @FindBy(xpath = "(//ms-edit-button[contains(@class,'ng-star-inserted')]//button)[1]")
     private WebElement editButton;
     @FindBy(xpath = "(//ms-delete-button//button)[1]")
     private WebElement deletebutton;
@@ -71,6 +71,10 @@ public class DialogContent extends Parent {
     @FindBy(xpath = "//ms-add-button[@tooltip='GENERAL.BUTTON.ADD']//div//button")
     private WebElement addButton2;
 
+    //************************** CSP-5 **************************//
+    @FindBy(xpath = "//ms-text-field[@placeholder='GENERAL.FIELD.NAME']//input")
+    private WebElement namePosition;
+
     //************************** CSP-7 **************************//
     @FindBy(xpath = "(//*[contains(@class,'mat-select-arrow-wrapper')])[3]")
             private WebElement locationType;
@@ -105,6 +109,8 @@ public class DialogContent extends Parent {
            case "integrationCode":myElement=integrationCode;break;
            case "priority":myElement=priority;break;
 
+           //************************** CSP-5 **************************//
+           case "namePosition":myElement=namePosition;break;
            //************************** CSP-7 **************************//
            case "capacity":myElement=capacity;break;
        }

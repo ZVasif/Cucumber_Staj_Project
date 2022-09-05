@@ -42,7 +42,8 @@ public class LeftNav extends Parent {
 
 
     //*************************** CSP-5 ***************************//
-
+    @FindBy(xpath = "//*[text()='Positions']")
+    public WebElement position;
 
     //*************************** CSP-7 ***************************//
     @FindBy(xpath = "//*[text()='School Setup']")
@@ -98,6 +99,8 @@ public class LeftNav extends Parent {
             case "departments":
                 myElement = departments;
                 break;
+            //*************************** CSP-5 ***************************//
+            case "position":myElement = position; break;
         }
         clickFunction(myElement);
     }
