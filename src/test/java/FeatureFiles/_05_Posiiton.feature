@@ -36,7 +36,7 @@ Feature: Human Resources Position Functionality
     Then Success message should be displayed
     Examples:
       | nameInputValue | shortNameValue | namePositionValue | editNameInputValue | editShortNameValue |
-      | Ahmet4          | Namli4          | Ahmet4             | ismettt               | Elcibeyy            |
+      | Ahmet5          | Namli5          | Ahmet5             | ismetttt               | Elcibegg            |
 
 
 
