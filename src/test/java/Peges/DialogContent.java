@@ -61,6 +61,13 @@ public class DialogContent extends Parent {
     @FindBy(xpath = "//*[text()='Campus School']")
     private WebElement mainPage;
 
+    //**************************  CSP-3    **************************//
+    @FindBy(xpath = "(//mat-select[@formcontrolname='attachmentStages']/div/div)[1]")
+    private WebElement stageButton;
+
+    @FindBy(xpath = "(//mat-option[@role='option']/span)[1]")
+    private WebElement stageExaminationOption;
+
     //**************************  CSP-4    **************************//
 
     @FindBy(xpath = "//ms-add-button[@tooltip='GENERAL.BUTTON.ADD']//div//button")
@@ -128,6 +135,9 @@ public class DialogContent extends Parent {
             case "deletebutton":myElement=deletebutton;break;
             case "deleteDialogbutton":myElement=deleteDialogbutton;break;
             case "mainPage":myElement=mainPage;break;
+            //**************************  CSP-3    **************************//
+            case "stageButton":myElement=stageButton;break;
+            case "stageExaminationOption":myElement=stageExaminationOption;break;
 
             //**************************  CSP-7    **************************//
             case "locationType":myElement=locationType;break;
