@@ -16,15 +16,26 @@ Feature: Fields Functionality
       | nameInput | <fieldName> |
     And Click on the element in the Dialog
       | save |
+    And Success message should be displayed
+    And User sending the keys in Dialog content
+      | searchBox | <fieldName> |
+    And Click on the element in the Dialog
+      | searchBTN |
+    And Click on the element in the Dialog
+      | editButton |
 
+    And User sending the keys in Dialog content
+      | nameInput | <fieldName2> |
+    And Click on the element in the Dialog
+      | save |
     And Success message should be displayed
 
-
-    And User delete item from Dialog
-      | <fieldName> |
+    And Click on the element in the Dialog
+      | deletebutton       |
+      | deleteDialogbutton |
 
     And Success message should be displayed
 
     Examples:
-      | fieldName |
-      | datwgko |
+      | fieldName | fieldName2 |
+      | beratyaaff  | beaaydasfg   |
