@@ -91,7 +91,7 @@ public class DialogContent extends Parent {
     private WebElement descriptionName2;
 
     @FindBy(xpath = "//ms-edit-button/button/span")
-    private WebElement addButton11;
+    private WebElement addButton21;
 
 
 
@@ -146,7 +146,7 @@ public class DialogContent extends Parent {
             case "editText":myElement=editText;break;
 
             //**************************  CSP-11    **************************//
-            case "addButton11":myElement=addButton11;break;
+            case "addButton21":myElement=addButton21;break;
 
         }
         clickFunction(myElement);

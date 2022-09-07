@@ -25,7 +25,7 @@ Feature: Discounts Functionality
     And Click on the element in the Dialog
       | searchBTN   |
       And Click on the element in the Dialog
-      | addButton11 |
+      | addButton21 |
       | save        |
     And Success message should be displayed
 
