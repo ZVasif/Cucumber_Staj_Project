@@ -90,7 +90,7 @@ public class DialogContent extends Parent {
     @FindBy(xpath="//ms-text-field[@placeholder='DISCOUNT.TITLE.DESCRIPTION']//input")
     private WebElement descriptionName2;
 
-    @FindBy(xpath = "//ms-edit-button/button")
+    @FindBy(xpath = "//ms-edit-button/button/span")
     private WebElement addButton11;
 
 
@@ -138,9 +138,7 @@ public class DialogContent extends Parent {
             //**************************  CSP-3    **************************//
             case "stageButton":myElement=stageButton;break;
             case "stageExaminationOption":myElement=stageExaminationOption;break;
-            //**************************  CSP-3    **************************//
 
-            case "addButton2":myElement=addButton2;break;
             //**************************  CSP-7    **************************//
             case "locationType":myElement=locationType;break;
             case "labortory":myElement=labortory;break;

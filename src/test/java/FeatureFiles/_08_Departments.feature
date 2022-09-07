@@ -39,4 +39,4 @@ Feature: School Departments Functionality
       | deleteDialogbutton |
     Examples:
       | nameValue | codeValue | shortNameValue | editNameValue | editCodeValue | editShortValue |
-      | Univer+-1  | 19415      | java-+18        | Cambridge+-1   | 89273          | java8+-1        |
+      | Univer/1  | 195      | java/18        | Cambridge/1   | 893          | java8/1        |
