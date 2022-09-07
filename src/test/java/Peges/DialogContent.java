@@ -66,9 +66,6 @@ public class DialogContent extends Parent {
     @FindBy(xpath = "(//ms-edit-button[contains(@class,'ng-star-inserted')]//button)[1]")
     public WebElement attestationsEditBTN;
 
-//    @FindBy(xpath = "(//ms-edit-button[contains(@class,'ng-star-inserted')]//button)[1]")
-//    public WebElement attestationsEditBTN;
-
     //************************** CSP-4 **************************//
 
     @FindBy(xpath = "//ms-add-button[@tooltip='GENERAL.BUTTON.ADD']//div//button")
@@ -95,6 +92,7 @@ public class DialogContent extends Parent {
 
 
 
+
     WebElement myElement;
     public void findAndSend (String strElement,String value){
        switch (strElement){
@@ -109,9 +107,9 @@ public class DialogContent extends Parent {
 
            //************************** CSP-7 **************************//
            case "capacity":myElement=capacity;break;
-
        }
-       
+
+
         sendKeysFunction(myElement,value);
 
     }

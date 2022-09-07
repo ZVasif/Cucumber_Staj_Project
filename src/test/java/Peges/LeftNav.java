@@ -5,9 +5,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class LeftNav extends Parent {
+public class LeftNav extends Parent{
     public LeftNav() {
-        PageFactory.initElements(GWD.getDriver(), this);
+        PageFactory.initElements(GWD.getDriver(),this);
     }
 
     //************************** Ortaq locator **************************//
@@ -29,75 +29,67 @@ public class LeftNav extends Parent {
     @FindBy(xpath = "(//span[contains(text(),'Position Categories')])[1]")
     public WebElement positionCategories;
 
-    //************************* CPS-2 *************************//
-    @FindBy(xpath = "//span[text()='Attestations']")
-    public WebElement attestations;
 
     //*************************** CSP-3 ***************************//
 
+    @FindBy(xpath = "(//span[text()='Document Types'])[1]")
+    private WebElement documentTypes;
 
     //*************************** CSP-4 ***************************//
     @FindBy(xpath = "(//span[text()='Fields'])[1]")
     private WebElement fields;
 
 
+
     //*************************** CSP-5 ***************************//
+
 
 
     //*************************** CSP-7 ***************************//
     @FindBy(xpath = "//*[text()='School Setup']")
-    private WebElement setupSchool;
+            private WebElement setupSchool;
     @FindBy(xpath = "//*[text()='Locations']")
-    private WebElement locatoins;
+            private WebElement locatoins;
 
     //*************************** CSP-8 ***************************//
     @FindBy(xpath = "//*[text()='Departments']")
-    private WebElement departments;
+            private WebElement departments;
+    //*************************** CSP-10 ***************************//
+    @FindBy(xpath = "//*[text()='Grade Levels']")
+    private WebElement gradeLevels;
+
+    //*************************** CSP-11 ***************************//
+    @FindBy(xpath = "(//span[text()='Discounts'])[1]")
+    private WebElement discounts;
 
 
-    //*************************** CSP-9 ***************************//
+
+
 
 
     WebElement myElement;
-
-    public void findAndClick(String strElement) {
-        switch (strElement) {
-            case "setup":
-                myElement = setup;
-                break;
-            case "parameters":
-                myElement = parameters;
-                break;
-            case "nationalities":
-                myElement = nationalities;
-                break;
-            case "humanResources":
-                myElement = humanResources;
-                break;
-            case "fields":
-                myElement = fields;
-                break;
-           //********************* CPS-1 ********************//
-            case "setupHumanResourse":
-                myElement = setupHumanResourse;
-                break;
-            case "positionCategories":
-                myElement = positionCategories;
-                break;
-            //******************** CPS-2 *****************************//
-            case "attestations": myElement=attestations; break;
+    public void findAndClick (String strElement){
+        switch (strElement){
+            case "setup":myElement=setup;break;
+            case "parameters":myElement=parameters;break;
+            case "nationalities":myElement=nationalities;break;
+            case "humanResources":myElement=humanResources;break;
+            case "setupHumanResourse":myElement=setupHumanResourse;break;
+            case "positionCategories":myElement=positionCategories;break;
+            //*************************** CSP-3 ***************************//
+            case "documentTypes":myElement=documentTypes;break;
+            //*************************** CSP-4 ***************************//
+            case "fields":myElement=fields;break;
 
             //*************************** CSP-7 ***************************//
-            case "setupSchool":
-                myElement = setupSchool;
-                break;
-            case "locatoins":
-                myElement = locatoins;
-                break;
+            case "setupSchool":myElement=setupSchool;break;
+            case "locatoins":myElement=locatoins;break;
             //*************************** CSP-8 ***************************//
-            case "departments":
-                myElement = departments;
-                break;
+            case "departments":myElement=departments;break;
+            //*************************** CSP-10 ***************************//
+            case "gradeLevels":myElement=gradeLevels;break;
+            //*************************** CSP-11 ***************************//
+            case "discounts":myElement=discounts;break;
         }
         clickFunction(myElement);
     }

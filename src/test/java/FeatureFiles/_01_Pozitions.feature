@@ -15,7 +15,7 @@ Feature: Positions Functionality
       | addBTN |
 
     And User sending the keys in Dialog content
-      | nameInput | 7bs8as |
+      | nameInput | 7b8as |
 
     And Click on the element in the Dialog
       | save |
@@ -26,7 +26,7 @@ Feature: Positions Functionality
       | editButton |
 
     And User sending the keys in Dialog content
-      | nameInput | c9s8dcc |
+      | nameInput | c98dcc |
 
     And Click on the element in the Dialog
       | save |
