@@ -92,7 +92,6 @@ public class DialogContent extends Parent {
 
 
 
-
     WebElement myElement;
     public void findAndSend (String strElement,String value){
        switch (strElement){
@@ -107,9 +106,9 @@ public class DialogContent extends Parent {
 
            //************************** CSP-7 **************************//
            case "capacity":myElement=capacity;break;
+
        }
-
-
+       
         sendKeysFunction(myElement,value);
 
     }
