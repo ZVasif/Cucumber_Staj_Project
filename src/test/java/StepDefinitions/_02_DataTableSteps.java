@@ -63,7 +63,7 @@ public class _02_DataTableSteps {
 
     @And("Success message should be displayed")
     public void successMessageShouldBeDisplayed() {
-        dc.findAndContainsText("successMessage","successfully");
+        dc.findAndContainsText("successMessage","success");
     }
 
 
