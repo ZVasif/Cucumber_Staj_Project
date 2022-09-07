@@ -28,8 +28,6 @@ public class DialogContent extends Parent {
     private WebElement nameInput;
     @FindBy(xpath = "//ms-text-field[@formcontrolname='shortName']//input")
     private WebElement shortName;
-    @FindBy(xpath = "//ms-text-field[@formcontrolname='code']/input")
-    private WebElement code;
     @FindBy(xpath = "//ms-save-button//button")
     private WebElement save;
     @FindBy(xpath = "//div[contains(text(),'successfully')]")
@@ -42,7 +40,8 @@ public class DialogContent extends Parent {
     private WebElement deleteDialogbutton;
 
     //**************************         **************************//
-
+    @FindBy(xpath = "//ms-text-field[@formcontrolname='code']/input")
+    private WebElement code;
     @FindBy(xpath = "//div[contains(text(),'already exists')]")
     private WebElement alreadyExist;
     @FindBy(css = "[aria-label='Close']")
@@ -62,16 +61,19 @@ public class DialogContent extends Parent {
     @FindBy(xpath = "//*[text()='Campus School']")
     private WebElement mainPage;
 
-    //*************************CSP -2 *************************//
-    @FindBy(xpath = "(//ms-edit-button[contains(@class,'ng-star-inserted')]//button)[1]")
-    public WebElement attestationsEditBTN;
+    //**************************  CSP-3    **************************//
+    @FindBy(xpath = "(//mat-select[@formcontrolname='attachmentStages']/div/div)[1]")
+    private WebElement stageButton;
 
-    //************************** CSP-4 **************************//
+    @FindBy(xpath = "(//mat-option[@role='option']/span)[1]")
+    private WebElement stageExaminationOption;
+
+    //**************************  CSP-4    **************************//
 
     @FindBy(xpath = "//ms-add-button[@tooltip='GENERAL.BUTTON.ADD']//div//button")
     private WebElement addButton2;
 
-    //************************** CSP-7 **************************//
+    //**************************  CSP-7    **************************//
     @FindBy(xpath = "(//*[contains(@class,'mat-select-arrow-wrapper')])[3]")
             private WebElement locationType;
     @FindBy(xpath = "//*[text()=' Laboratory ']")
@@ -80,12 +82,25 @@ public class DialogContent extends Parent {
             private WebElement capacity;
     @FindBy(xpath = "//td[contains(text(),'co+-1')]")
             private WebElement editText;
+    //**************************  CSP-10    **************************//
+    @FindBy(xpath = "//ms-text-field[@formcontrolname='order']//input")
+    private WebElement order;
+    //    @FindBy(xpath = "//tbody[@role='rowgroup']")
+//    private WebElement list;
+    @FindBy(xpath = "//td[contains(text(),'grade2')]//following::div/ms-edit-button")
+    private WebElement editGrade;
+    @FindBy(xpath = "//td[contains(text(),'grade3')]//following::div/ms-delete-button")
+    private WebElement textDelete;
 
-    //************************** CSP-8 **************************//
-    @FindBy(xpath = "//*[text()='Section']")
-            private WebElement section;
-    @FindBy(xpath = "//td[contains(text(),'Univer')]")
-    private WebElement editTextDepartment;
+    //**************************  CSP-11    **************************//
+    @FindBy(xpath="//ms-text-field[@formcontrolname='description']//input")
+    private WebElement descriptionName;
+
+    @FindBy(xpath="//ms-text-field[@placeholder='DISCOUNT.TITLE.DESCRIPTION']//input")
+    private WebElement descriptionName2;
+
+    @FindBy(xpath = "//ms-edit-button/button/span")
+    private WebElement addButton11;
 
 
 
@@ -105,8 +120,13 @@ public class DialogContent extends Parent {
            case "integrationCode":myElement=integrationCode;break;
            case "priority":myElement=priority;break;
 
-           //************************** CSP-7 **************************//
+           //**************************  CSP-7    **************************//
            case "capacity":myElement=capacity;break;
+           //**************************  CSP-10 **************************//
+           case "order":myElement=order;break;
+           //**************************  CSP-11 **************************//
+           case "descriptionName":myElement=descriptionName;break;
+           case "descriptionName2":myElement=descriptionName2;break;
        }
 
 
@@ -126,17 +146,23 @@ public class DialogContent extends Parent {
             case "deletebutton":myElement=deletebutton;break;
             case "deleteDialogbutton":myElement=deleteDialogbutton;break;
             case "mainPage":myElement=mainPage;break;
-            //***********************CSP -2 ********************************//
-            case "attestationsEditBTN":myElement=attestationsEditBTN; break;
+            //**************************  CSP-3    **************************//
+            case "stageButton":myElement=stageButton;break;
+            case "stageExaminationOption":myElement=stageExaminationOption;break;
+            //**************************  CSP-4 **************************//
+            case "addButton2":myElement=addButton2;break;
 
-            //************************** CSP-7 **************************//
+            //**************************  CSP-7    **************************//
             case "locationType":myElement=locationType;break;
             case "labortory":myElement=labortory;break;
             case "editButton":myElement=editButton;break;
             case "editText":myElement=editText;break;
-            //************************** CSP-8 **************************//
-            case "section":myElement=section;break;
-            case "editTextDepartment":myElement=editTextDepartment;break;
+            //**************************  CSP-10 **************************//
+            case "editGrade":myElement=editGrade;break;
+            case "textDelete":myElement=textDelete;break;
+
+            //**************************  CSP-11    **************************//
+            case "addButton11":myElement=addButton11;break;
 
         }
         clickFunction(myElement);
