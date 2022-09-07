@@ -35,4 +35,4 @@ Feature: Discounts Functionality
     And Success message should be displayed
     Examples:
       | DName | cInput | pri |
-      | alssff  | 232    | 80  |
+      | alsgpf  | 232    | 80  |
