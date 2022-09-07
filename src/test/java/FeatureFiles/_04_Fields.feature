@@ -38,4 +38,4 @@ Feature: Fields Functionality
 
     Examples:
       | fieldName | fieldName2 |
-      | beratya2  | beaayd8   |
+      | beratyaaff  | beaaydasfg   |

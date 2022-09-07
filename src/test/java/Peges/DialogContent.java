@@ -82,15 +82,6 @@ public class DialogContent extends Parent {
             private WebElement capacity;
     @FindBy(xpath = "//td[contains(text(),'co+-1')]")
             private WebElement editText;
-    //**************************  CSP-10    **************************//
-    @FindBy(xpath = "//ms-text-field[@formcontrolname='order']//input")
-    private WebElement order;
-    //    @FindBy(xpath = "//tbody[@role='rowgroup']")
-//    private WebElement list;
-    @FindBy(xpath = "//td[contains(text(),'grade2')]//following::div/ms-edit-button")
-    private WebElement editGrade;
-    @FindBy(xpath = "//td[contains(text(),'grade3')]//following::div/ms-delete-button")
-    private WebElement textDelete;
 
     //**************************  CSP-11    **************************//
     @FindBy(xpath="//ms-text-field[@formcontrolname='description']//input")
@@ -100,7 +91,7 @@ public class DialogContent extends Parent {
     private WebElement descriptionName2;
 
     @FindBy(xpath = "//ms-edit-button/button/span")
-    private WebElement addButton11;
+    private WebElement addButton21;
 
 
 
@@ -122,9 +113,7 @@ public class DialogContent extends Parent {
 
            //**************************  CSP-7    **************************//
            case "capacity":myElement=capacity;break;
-           //**************************  CSP-10 **************************//
-           case "order":myElement=order;break;
-           //**************************  CSP-11 **************************//
+           //**************************  CSP-11    **************************//
            case "descriptionName":myElement=descriptionName;break;
            case "descriptionName2":myElement=descriptionName2;break;
        }
@@ -149,20 +138,15 @@ public class DialogContent extends Parent {
             //**************************  CSP-3    **************************//
             case "stageButton":myElement=stageButton;break;
             case "stageExaminationOption":myElement=stageExaminationOption;break;
-            //**************************  CSP-4 **************************//
-            case "addButton2":myElement=addButton2;break;
 
             //**************************  CSP-7    **************************//
             case "locationType":myElement=locationType;break;
             case "labortory":myElement=labortory;break;
             case "editButton":myElement=editButton;break;
             case "editText":myElement=editText;break;
-            //**************************  CSP-10 **************************//
-            case "editGrade":myElement=editGrade;break;
-            case "textDelete":myElement=textDelete;break;
 
             //**************************  CSP-11    **************************//
-            case "addButton11":myElement=addButton11;break;
+            case "addButton21":myElement=addButton21;break;
 
         }
         clickFunction(myElement);
