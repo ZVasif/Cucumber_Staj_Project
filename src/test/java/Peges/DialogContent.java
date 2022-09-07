@@ -66,6 +66,9 @@ public class DialogContent extends Parent {
     @FindBy(xpath = "(//ms-edit-button[contains(@class,'ng-star-inserted')]//button)[1]")
     public WebElement attestationsEditBTN;
 
+//    @FindBy(xpath = "(//ms-edit-button[contains(@class,'ng-star-inserted')]//button)[1]")
+//    public WebElement attestationsEditBTN;
+
     //************************** CSP-4 **************************//
 
     @FindBy(xpath = "//ms-add-button[@tooltip='GENERAL.BUTTON.ADD']//div//button")
