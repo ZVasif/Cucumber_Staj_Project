@@ -47,5 +47,5 @@ Feature: Nationalities Functionality
 
     Examples:
       | nameinput | nameseachinput |
-      | beyzaN    | beyzaN1        |
+      | beyzaN11    | beyzaN11       |
 
