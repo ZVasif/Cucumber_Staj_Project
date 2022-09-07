@@ -24,7 +24,8 @@ Feature: Discounts Functionality
       | descriptionName2 | <DName> |
     And Click on the element in the Dialog
       | searchBTN   |
-      | addButton11 |
+      And Click on the element in the Dialog
+      | addButton21 |
       | save        |
     And Success message should be displayed
 
@@ -34,4 +35,4 @@ Feature: Discounts Functionality
     And Success message should be displayed
     Examples:
       | DName | cInput | pri |
-      | alsfaa  | 232    | 80  |
+      | alsgpf  | 232    | 80  |
