@@ -60,6 +60,9 @@ public class DialogContent extends Parent {
     private WebElement priority;
     @FindBy(xpath = "//*[text()='Campus School']")
     private WebElement mainPage;
+    //************************** CSP-2 **************************//
+    @FindBy(xpath = "(//ms-edit-button[@class=\"ng-tns-c552-57 ng-star-inserted\"])[1]")
+    private WebElement attestationsEditBTN;
 
     //**************************  CSP-3    **************************//
     @FindBy(xpath = "(//mat-select[@formcontrolname='attachmentStages']/div/div)[1]")
@@ -82,7 +85,34 @@ public class DialogContent extends Parent {
             private WebElement capacity;
     @FindBy(xpath = "//td[contains(text(),'co+-1')]")
             private WebElement editText;
+    //************************** CSP-8 **************************//
+    @FindBy(xpath = "//*[text()='Section']")
+    private WebElement section;
+    @FindBy(xpath = "//td[contains(text(),'Univer')]")
+    private WebElement editTextDepartment;
+    //************************** CSP-10 **************************//
+    @FindBy(xpath = "//ms-text-field[@formcontrolname='order']//input")
+    private WebElement order;
+    @FindBy(xpath = "//td[contains(text(),'grade2.1')]//following::div/ms-edit-button")
+    private WebElement editGrade;
+    @FindBy(xpath = "//td[contains(text(),'grade3.1')]//following::div/ms-delete-button")
+    private WebElement textDelete;
 
+    //**************************  CSP-9    **************************//
+    @FindBy (xpath = "//ms-masked-text-field[@formcontrolname='iban']//input")
+    private WebElement iban;
+
+    @FindBy(xpath = "//mat-select[@formcontrolname='currency']//span")
+    private WebElement currency;
+
+    @FindBy (xpath = "//mat-option[@role='option'][4]//span")
+    private WebElement TRY;
+
+    @FindBy (xpath = "//ms-text-field[@placeholder='GENERAL.FIELD.NAME']//input")
+    private WebElement searchNameAccounts;
+
+    //**************************  CSP-11    **************************//
+    //************************** CSP-11 **************************//
     //**************************  CSP-11    **************************//
     @FindBy(xpath="//ms-text-field[@formcontrolname='description']//input")
     private WebElement descriptionName;
@@ -113,6 +143,11 @@ public class DialogContent extends Parent {
 
            //**************************  CSP-7    **************************//
            case "capacity":myElement=capacity;break;
+           //**************************  CSP-9    **************************//
+           case "iban":myElement=iban;break;
+           case "searchNameAccounts": myElement=searchNameAccounts;break;
+           //************************** CSP-7 **************************//
+           case "order":myElement=order;break;
            //**************************  CSP-11    **************************//
            case "descriptionName":myElement=descriptionName;break;
            case "descriptionName2":myElement=descriptionName2;break;
@@ -144,7 +179,19 @@ public class DialogContent extends Parent {
             case "labortory":myElement=labortory;break;
             case "editButton":myElement=editButton;break;
             case "editText":myElement=editText;break;
+            //************************** CSP-8 **************************//
+            case "section":myElement=section;break;
+            case "editTextDepartment":myElement=editTextDepartment;break;
+            //************************** CSP-10 **************************//
+            case "editGrade":myElement=editGrade;break;
+            case "textDelete":myElement=textDelete;break;
 
+            //**************************  CSP-9    **************************//
+            case "currency":myElement=currency;break;
+            case "TRY":myElement=TRY;break;
+
+            //**************************  CSP-11    **************************//
+            //************************** CSP-11 **************************//
             //**************************  CSP-11    **************************//
             case "addButton21":myElement=addButton21;break;
 
@@ -177,5 +224,6 @@ public class DialogContent extends Parent {
         findAndClick("deleteDialogbutton");
 
     }
+    //sagb
 
 }

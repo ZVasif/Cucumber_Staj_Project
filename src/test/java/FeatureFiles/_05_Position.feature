@@ -10,20 +10,28 @@ Feature: Human Resources Position Functionality
       | humanResources     |
       | setupHumanResourse |
       | position           |
+
     And Click on the element in the Dialog
       | addBTN |
+
     Then User sending the keys in Dialog content
       | nameInput | <nameInputValue> |
       | shortName | <shortNameValue> |
+
     And Click on the element in the Dialog
       | save |
+
     Then Success message should be displayed
+
     And User sending the keys in Dialog content
       | namePosition | <nameInputValue> |
+
     And Click on the element in the Dialog
       | searchBTN |
+
     And Click on the element in the Dialog
       | editButton |
+
     Then User sending the keys in Dialog content
       | nameInput | <editNameInputValue> |
       | shortName | <editShortNameValue> |

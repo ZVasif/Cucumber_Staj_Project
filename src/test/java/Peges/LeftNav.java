@@ -29,6 +29,10 @@ public class LeftNav extends Parent{
     @FindBy(xpath = "(//span[contains(text(),'Position Categories')])[1]")
     public WebElement positionCategories;
 
+    //** CSP-2 **//
+    @FindBy(xpath = "(//span[text()='Attestations'])[1]")
+    public WebElement attestations;
+
 
     //*************************** CSP-3 ***************************//
 
@@ -56,6 +60,11 @@ public class LeftNav extends Parent{
     //*************************** CSP-8 ***************************//
     @FindBy(xpath = "//*[text()='Departments']")
             private WebElement departments;
+
+    //**************************  CSP-9    **************************//
+    @FindBy (xpath = "    //fuse-nav-vertical-item[@class='ng-tns-c249-8 nav-item ng-star-inserted'][10]//span\n")
+    private WebElement bankAccounts;
+
     //*************************** CSP-10 ***************************//
     @FindBy(xpath = "//*[text()='Grade Levels']")
     private WebElement gradeLevels;
@@ -78,6 +87,8 @@ public class LeftNav extends Parent{
             case "humanResources":myElement=humanResources;break;
             case "setupHumanResourse":myElement=setupHumanResourse;break;
             case "positionCategories":myElement=positionCategories;break;
+            //*************************** CSP-2 ***************************//
+            case "attestations":myElement=attestations;break;
             //*************************** CSP-3 ***************************//
             case "documentTypes":myElement=documentTypes;break;
             //*************************** CSP-4 ***************************//
@@ -93,6 +104,8 @@ public class LeftNav extends Parent{
             case "locatoins":myElement=locatoins;break;
             //*************************** CSP-8 ***************************//
             case "departments":myElement=departments;break;
+            //**************************  CSP-9    **************************//
+            case "bankAccounts":myElement=bankAccounts;break;
             //*************************** CSP-10 ***************************//
             case "gradeLevels":myElement=gradeLevels;break;
             //*************************** CSP-11 ***************************//
