@@ -98,6 +98,16 @@ public class DialogContent extends Parent {
     @FindBy(xpath = "//td[contains(text(),'grade3.1')]//following::div/ms-delete-button")
     private WebElement textDelete;
 
+        //**************************  CSP-11    **************************//
+    @FindBy(xpath="//ms-text-field[@formcontrolname='description']//input")
+    private WebElement descriptionName;
+
+    @FindBy(xpath="//ms-text-field[@placeholder='DISCOUNT.TITLE.DESCRIPTION']//input")
+    private WebElement descriptionName2;
+
+    @FindBy(xpath = "//ms-edit-button/button/span")
+    private WebElement addButton21;
+
     //**************************  CSP-9    **************************//
     @FindBy (xpath = "//ms-masked-text-field[@formcontrolname='iban']//input")
     private WebElement iban;
@@ -110,18 +120,6 @@ public class DialogContent extends Parent {
 
     @FindBy (xpath = "//ms-text-field[@placeholder='GENERAL.FIELD.NAME']//input")
     private WebElement searchNameAccounts;
-
-    //**************************  CSP-11    **************************//
-    //************************** CSP-11 **************************//
-    //**************************  CSP-11    **************************//
-    @FindBy(xpath="//ms-text-field[@formcontrolname='description']//input")
-    private WebElement descriptionName;
-
-    @FindBy(xpath="//ms-text-field[@placeholder='DISCOUNT.TITLE.DESCRIPTION']//input")
-    private WebElement descriptionName2;
-
-    @FindBy(xpath = "//ms-edit-button/button/span")
-    private WebElement addButton21;
 
 
 
@@ -143,14 +141,14 @@ public class DialogContent extends Parent {
 
            //**************************  CSP-7    **************************//
            case "capacity":myElement=capacity;break;
-           //**************************  CSP-9    **************************//
-           case "iban":myElement=iban;break;
-           case "searchNameAccounts": myElement=searchNameAccounts;break;
            //************************** CSP-7 **************************//
            case "order":myElement=order;break;
            //**************************  CSP-11    **************************//
            case "descriptionName":myElement=descriptionName;break;
            case "descriptionName2":myElement=descriptionName2;break;
+           //**************************  CSP-9    **************************//
+           case "iban":myElement=iban;break;
+           case "searchNameAccounts": myElement=searchNameAccounts;break;
        }
 
 
@@ -182,18 +180,16 @@ public class DialogContent extends Parent {
             //************************** CSP-8 **************************//
             case "section":myElement=section;break;
             case "editTextDepartment":myElement=editTextDepartment;break;
+
             //************************** CSP-10 **************************//
             case "editGrade":myElement=editGrade;break;
             case "textDelete":myElement=textDelete;break;
-
+            //**************************  CSP-11    **************************//
+            case "addButton21":myElement=addButton21;break;
             //**************************  CSP-9    **************************//
             case "currency":myElement=currency;break;
             case "TRY":myElement=TRY;break;
 
-            //**************************  CSP-11    **************************//
-            //************************** CSP-11 **************************//
-            //**************************  CSP-11    **************************//
-            case "addButton21":myElement=addButton21;break;
 
         }
         clickFunction(myElement);
