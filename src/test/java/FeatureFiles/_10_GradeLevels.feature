@@ -17,23 +17,23 @@ Feature: Grade Levels Functionality
       | shortName | <shortNameValue> |
       | order     | <orderValue>     |
     Then Click on the element in the Dialog
-    |save|
+      | save |
     And Success message should be displayed
     Then Click on the element in the Dialog
-    |editGrade|
+      | editGrade |
     And User sending the keys in Dialog content
-      | nameInput | <editNameValue> |
+      | nameInput | <editNameValue>  |
       | shortName | <editShortValue> |
-      | order     | <editOrderValue>     |
+      | order     | <editOrderValue> |
     Then Click on the element in the Dialog
-      |save|
+      | save |
     And Success message should be displayed
     Then Click on the element in the Dialog
-    |textDelete|
-    |deleteDialogbutton|
+      | textDelete         |
+      | deleteDialogbutton |
     And Success message should be displayed
     Examples:
-      | nameInputValue | shortNameValue | orderValue |editNameValue|editShortValue|editOrderValue|
-      | grade2         | gra2           | 2          |grade3       |gra3          |3             |
+      | nameInputValue | shortNameValue | orderValue | editNameValue | editShortValue | editOrderValue |
+      | grade2.1       | gra2.1         | 7          | grade3.1      | gra3.1         | 6              |
 
 

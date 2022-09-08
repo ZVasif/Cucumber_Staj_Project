@@ -38,4 +38,4 @@ Feature: Document Types Functionality
     And Success message should be displayed
     Examples:
       | NameD |
-      | berkk  |
+      | berk12  |
