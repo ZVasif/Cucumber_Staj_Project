@@ -16,7 +16,7 @@ Feature: Attestations Functionality
       | addBTN |
 
     And User sending the keys in Dialog content
-      | nameInput | beyza1+ |
+      | nameInput | beyza+ |
 
     And Click on the element in the Dialog
       | save |
@@ -27,7 +27,7 @@ Feature: Attestations Functionality
       | attestationsEditBTN |
 
     And User sending the keys in Dialog content
-      | nameInput | asa1fgf+dad|
+      | nameInput | asa1fgf+|
 
     And Click on the element in the Dialog
       | save |
