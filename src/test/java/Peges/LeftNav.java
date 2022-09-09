@@ -54,7 +54,6 @@ public class LeftNav extends Parent{
     @FindBy(xpath = "(//span[text()='Discounts'])[1]")
     private WebElement discounts;
 
-
     WebElement myElement;
     public void findAndClick (String strElement){
         switch (strElement){
