@@ -29,7 +29,7 @@ Feature: Nationalities Functionality
       | searchBTN |
 
     And Click on the element in the Dialog
-      | attestationsEditBTN |
+      | editButton |
 
     And User sending the keys in Dialog content
       | nameInput | <nameseachinput> |
@@ -47,5 +47,5 @@ Feature: Nationalities Functionality
 
     Examples:
       | nameinput   | nameseachinput |
-      | beyza1N2110 | beyza1N15810   |
+      | beyza1+0 | beyza+0   |
 
