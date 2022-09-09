@@ -46,6 +46,6 @@ Feature: Nationalities Functionality
     Then Success message should be displayed
 
     Examples:
-      | nameinput | nameseachinput |
-      | beyzaN11    | beyzaN11       |
+      | nameinput   | nameseachinput |
+      | beyza1N2110 | beyza1N15810   |
 
