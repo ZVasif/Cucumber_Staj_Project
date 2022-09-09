@@ -13,16 +13,12 @@ public class LeftNav extends Parent{
     //************************** Ortaq locator **************************//
     @FindBy(xpath = "(//*[text()='Setup'])[1]")
     private WebElement setup;
-
     @FindBy(xpath = "//*[text()='Parameters']")
     private WebElement parameters;
-
     @FindBy(xpath = "//*[text()='Human Resources']")
     private WebElement humanResources;
-
     @FindBy(xpath = "//span[text()='Nationalities']")
     private WebElement nationalities;
-
     //*************************** CSP-1 ***************************//
     @FindBy(xpath = "(//span[contains(text(),'Setup')])[4]")
     public WebElement setupHumanResourse;
@@ -31,44 +27,32 @@ public class LeftNav extends Parent{
     //*************************** CSP-2 ***************************//
     @FindBy(xpath = "(//span[text()='Attestations'])[1]")
     public WebElement attestations;
-
-
     //*************************** CSP-3 ***************************//
-
     @FindBy(xpath = "(//span[text()='Document Types'])[1]")
     private WebElement documentTypes;
-
     //*************************** CSP-4 ***************************//
     @FindBy(xpath = "(//span[text()='Fields'])[1]")
     private WebElement fields;
-
-
-
     //*************************** CSP-5 ***************************//
-
-
-
+    @FindBy(xpath = "//*[text()='Positions']")
+    public WebElement position;
     //*************************** CSP-7 ***************************//
     @FindBy(xpath = "//*[text()='School Setup']")
             private WebElement setupSchool;
     @FindBy(xpath = "//*[text()='Locations']")
             private WebElement locatoins;
-
     //*************************** CSP-8 ***************************//
     @FindBy(xpath = "//*[text()='Departments']")
             private WebElement departments;
+    //**************************  CSP-9    **************************//
+    @FindBy (xpath = "    //fuse-nav-vertical-item[@class='ng-tns-c249-8 nav-item ng-star-inserted'][10]//span\n")
+    private WebElement bankAccounts;
     //*************************** CSP-10 ***************************//
     @FindBy(xpath = "//*[text()='Grade Levels']")
     private WebElement gradeLevels;
-
     //*************************** CSP-11 ***************************//
     @FindBy(xpath = "(//span[text()='Discounts'])[1]")
     private WebElement discounts;
-
-
-
-
-
 
     WebElement myElement;
     public void findAndClick (String strElement){
@@ -83,12 +67,15 @@ public class LeftNav extends Parent{
             case "documentTypes":myElement=documentTypes;break;
             //*************************** CSP-4 ***************************//
             case "fields":myElement=fields;break;
-
+            //*************************** CSP-5 ***************************//
+            case "position": myElement = position;break;
             //*************************** CSP-7 ***************************//
             case "setupSchool":myElement=setupSchool;break;
             case "locatoins":myElement=locatoins;break;
             //*************************** CSP-8 ***************************//
             case "departments":myElement=departments;break;
+            //**************************  CSP-9    **************************//
+            case "bankAccounts":myElement=bankAccounts;break;
             //*************************** CSP-10 ***************************//
             case "gradeLevels":myElement=gradeLevels;break;
             //*************************** CSP-11 ***************************//
