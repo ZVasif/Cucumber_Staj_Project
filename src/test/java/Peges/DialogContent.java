@@ -108,6 +108,19 @@ public class DialogContent extends Parent {
     @FindBy(xpath = "//ms-edit-button/button/span")
     private WebElement addButton21;
 
+    //**************************  CSP-9    **************************//
+    @FindBy (xpath = "//ms-masked-text-field[@formcontrolname='iban']//input")
+    private WebElement iban;
+
+    @FindBy(xpath = "//mat-select[@formcontrolname='currency']//span")
+    private WebElement currency;
+
+    @FindBy (xpath = "//mat-option[@role='option'][4]//span")
+    private WebElement TRY;
+
+    @FindBy (xpath = "//ms-text-field[@placeholder='GENERAL.FIELD.NAME']//input")
+    private WebElement searchNameAccounts;
+
 
 
 
@@ -133,6 +146,9 @@ public class DialogContent extends Parent {
            //**************************  CSP-11    **************************//
            case "descriptionName":myElement=descriptionName;break;
            case "descriptionName2":myElement=descriptionName2;break;
+           //**************************  CSP-9    **************************//
+           case "iban":myElement=iban;break;
+           case "searchNameAccounts": myElement=searchNameAccounts;break;
        }
 
 
@@ -166,12 +182,18 @@ public class DialogContent extends Parent {
             //************************** CSP-8 **************************//
             case "section":myElement=section;break;
             case "editTextDepartment":myElement=editTextDepartment;break;
+
             //************************** CSP-10 **************************//
             case "editGrade":myElement=editGrade;break;
             case "textDelete":myElement=textDelete;break;
 
             //************************** CSP-11 **************************//
+
             case "addButton21":myElement=addButton21;break;
+            //**************************  CSP-9    **************************//
+            case "currency":myElement=currency;break;
+            case "TRY":myElement=TRY;break;
+
 
         }
         clickFunction(myElement);
@@ -202,6 +224,5 @@ public class DialogContent extends Parent {
         findAndClick("deleteDialogbutton");
 
     }
-    //Salam
 
 }

@@ -32,6 +32,10 @@ public class LeftNav extends Parent{
     @FindBy(xpath = "(//span[text()='Attestations'])[1]")
     public WebElement attestations;
 
+    //** CSP-2 **//
+    @FindBy(xpath = "(//span[text()='Attestations'])[1]")
+    public WebElement attestations;
+
 
     //*************************** CSP-3 ***************************//
 
@@ -59,6 +63,11 @@ public class LeftNav extends Parent{
     //*************************** CSP-8 ***************************//
     @FindBy(xpath = "//*[text()='Departments']")
             private WebElement departments;
+
+    //**************************  CSP-9    **************************//
+    @FindBy (xpath = "    //fuse-nav-vertical-item[@class='ng-tns-c249-8 nav-item ng-star-inserted'][10]//span\n")
+    private WebElement bankAccounts;
+
     //*************************** CSP-10 ***************************//
     @FindBy(xpath = "//*[text()='Grade Levels']")
     private WebElement gradeLevels;
@@ -98,6 +107,8 @@ public class LeftNav extends Parent{
             case "locatoins":myElement=locatoins;break;
             //*************************** CSP-8 ***************************//
             case "departments":myElement=departments;break;
+            //**************************  CSP-9    **************************//
+            case "bankAccounts":myElement=bankAccounts;break;
             //*************************** CSP-10 ***************************//
             case "gradeLevels":myElement=gradeLevels;break;
             //*************************** CSP-11 ***************************//
