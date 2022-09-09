@@ -55,7 +55,6 @@ public class LeftNav extends Parent{
     private WebElement discounts;
 
 
-
     WebElement myElement;
     public void findAndClick (String strElement){
         switch (strElement){
