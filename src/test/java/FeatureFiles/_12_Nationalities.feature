@@ -1,33 +1,38 @@
-Feature: Attestations Functionality
+Feature: Nationalities Functionality
 
   Background:
     Given Navigate to basqar
     When Enter username and password and click login button
     Then User sholud login successfuly
 
-  Scenario: Create Attestations
-
+  Scenario Outline: Create Nationalities
     And Click on the element in the left Nav
-      | humanResources     |
-      | setupHumanResourse |
-      | attestations       |
+      | setup         |
+      | parameters    |
+      | nationalities |
 
     And Click on the element in the Dialog
       | addBTN |
 
     And User sending the keys in Dialog content
-      | nameInput | beyza+ |
+      | nameInput | <nameinput> |
 
     And Click on the element in the Dialog
       | save |
 
     Then Success message should be displayed
 
+    And User sending the keys in Dialog content
+      | searchBox | <nameinput> |
+
     And Click on the element in the Dialog
-      | attestationsEditBTN |
+      | searchBTN |
+
+    And Click on the element in the Dialog
+      | editButton |
 
     And User sending the keys in Dialog content
-      | nameInput | asa1fgf+|
+      | nameInput | <nameseachinput> |
 
     And Click on the element in the Dialog
       | save |
@@ -40,5 +45,7 @@ Feature: Attestations Functionality
 
     Then Success message should be displayed
 
-
+    Examples:
+      | nameinput   | nameseachinput |
+      | beyza1+0 | beyza+0   |
 
