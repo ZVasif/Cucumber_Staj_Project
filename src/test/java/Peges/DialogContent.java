@@ -66,6 +66,9 @@ public class DialogContent extends Parent {
     //************************** CSP-4 **************************//
     @FindBy(xpath = "//ms-add-button[@tooltip='GENERAL.BUTTON.ADD']//div//button")
     private WebElement addButton2;
+    //************************** CSP-5 **************************//
+    @FindBy(xpath = "//ms-text-field[@placeholder='GENERAL.FIELD.NAME']//input")
+    private WebElement namePosition;
     //************************** CSP-7 **************************//
     @FindBy(xpath = "(//*[contains(@class,'mat-select-arrow-wrapper')])[3]")
             private WebElement locationType;
@@ -115,6 +118,8 @@ public class DialogContent extends Parent {
            case "searchBox":myElement=searchBox;break;
            case "integrationCode":myElement=integrationCode;break;
            case "priority":myElement=priority;break;
+           //************************** CSP-5 **************************//
+           case "namePosition":myElement=namePosition;break;
            //************************** CSP-7 **************************//
            case "capacity":myElement=capacity;break;
            //************************** CSP-10 **************************//

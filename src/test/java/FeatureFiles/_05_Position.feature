@@ -49,7 +49,7 @@ Feature: Human Resources Position Functionality
 
     Examples:
       | nameInputValue | shortNameValue | editNameInputValue | editShortNameValue |
-      | AE3            | n4             | aslan4            | elcibeg4           |
+      | adem         | kar            | madem                | tar               |
 
 
 
