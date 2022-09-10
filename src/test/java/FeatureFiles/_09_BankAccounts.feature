@@ -46,6 +46,6 @@ Feature: Bank Accounts Funtionally
 
     Examples:
       | nameInputValue | ibanValue | integrationCodeValue | searchNameAccountsValue |
-      | alpaslan11     | TR00 1234 | 12                   | alpaslan11              |
+      | alpaslan11     | TR00 1246 | 12                   | alpaslan11              |
 
 
