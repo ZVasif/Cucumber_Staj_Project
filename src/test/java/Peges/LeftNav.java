@@ -36,6 +36,13 @@ public class LeftNav extends Parent{
     //*************************** CSP-5 ***************************//
     @FindBy(xpath = "//*[text()='Positions']")
     public WebElement position;
+    //*************************** CSP-6 ***************************//
+    @FindBy(xpath = "//*[text()='Education']")
+    private WebElement education;
+    @FindBy(xpath = "//span[@class='nav-link-title ng-tns-c249-23 ng-star-inserted']")
+    private WebElement educationSetup;
+    @FindBy(xpath = "//span[text()='Subject Categories']")
+    private WebElement subjectCategories;
     //*************************** CSP-7 ***************************//
     @FindBy(xpath = "//*[text()='School Setup']")
             private WebElement setupSchool;
@@ -69,6 +76,10 @@ public class LeftNav extends Parent{
             case "fields":myElement=fields;break;
             //*************************** CSP-5 ***************************//
             case "position": myElement = position;break;
+            //*************************** CSP-6 ***************************//
+            case "education":myElement=education;break;
+            case "educationSetup":myElement=educationSetup;break;
+            case "subjectCategories":myElement=subjectCategories;break;
             //*************************** CSP-7 ***************************//
             case "setupSchool":myElement=setupSchool;break;
             case "locatoins":myElement=locatoins;break;
