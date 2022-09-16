@@ -47,5 +47,5 @@ Feature: Nationalities Functionality
 
     Examples:
       | nameinput   | nameseachinput |
-      | beyza1+0 | beyza+0   |
+      | group9 | group9+   |
 

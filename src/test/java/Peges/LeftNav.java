@@ -70,6 +70,8 @@ public class LeftNav extends Parent{
             case "humanResources":myElement=humanResources;break;
             case "setupHumanResourse":myElement=setupHumanResourse;break;
             case "positionCategories":myElement=positionCategories;break;
+            //*************************** CSP-2 ***************************//
+            case "attestations":myElement=attestations;break;
             //*************************** CSP-3 ***************************//
             case "documentTypes":myElement=documentTypes;break;
             //*************************** CSP-4 ***************************//

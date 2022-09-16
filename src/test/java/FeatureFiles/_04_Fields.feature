@@ -24,8 +24,6 @@ Feature: Fields Functionality
     And Click on the element in the Dialog
       | editButton |
 
-    And User sending the keys in Dialog content
-      | nameInput | <fieldName2> |
     And Click on the element in the Dialog
       | save |
     And Success message should be displayed
@@ -37,5 +35,5 @@ Feature: Fields Functionality
     And Success message should be displayed
 
     Examples:
-      | fieldName | fieldName2 |
-      | beratyaaff  | beaaydasfg   |
+      | fieldName |
+      | berat+ff  |

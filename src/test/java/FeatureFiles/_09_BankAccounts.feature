@@ -37,15 +37,13 @@ Feature: Bank Accounts Funtionally
       | searchBTN |
 
     And Click on the element in the Dialog
-      | deletebutton |
-
-    And Click on the element in the Dialog
+      | deletebutton       |
       | deleteDialogbutton |
 
     Then Success message should be displayed
 
     Examples:
       | nameInputValue | ibanValue | integrationCodeValue | searchNameAccountsValue |
-      | alpaslan11     | TR00 1246 | 12                   | alpaslan11              |
+      | alpaslan7      | TR00 127  | 127                  | alpaslan7               |
 
 

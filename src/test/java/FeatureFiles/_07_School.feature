@@ -36,7 +36,7 @@ Feature: School Location Functionality
     Then Success message should be displayed
     Examples:
       | nameValue | shortNameValue | capacityValue | editNameValue | editShortValue | editCapacityValue |
-      | co+-1     | tom+-1         | 22+-1         | po+1          | co+2           | 25+1              |
+      | co+-12     | tom+-12         | 22+-12         | po+12          | co+22           | 25+12              |
 
 
 
