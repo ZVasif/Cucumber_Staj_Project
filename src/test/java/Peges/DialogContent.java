@@ -43,8 +43,8 @@ public class DialogContent extends Parent {
     private WebElement alreadyExist;
     @FindBy(css = "[aria-label='Close']")
     private WebElement closeDialog;
-    @FindBy(xpath = "//button[text()='Accept all cookies']")
-    private WebElement acceptCookies;
+//    @FindBy(xpath = "//button[text()='Accept all cookies']")
+//    private WebElement acceptCookies;
     @FindBy(xpath = "//mat-form-field[contains(@class,'mat-form-field')]//input")
     private WebElement searchBox;
     @FindBy(xpath = "//ms-search-button//button")
@@ -141,7 +141,7 @@ public class DialogContent extends Parent {
     public void findAndClick (String strElement){
         switch (strElement){
             case "loginButton":myElement=loginButton;break;
-            case "acceptCookies":myElement=acceptCookies;break;
+            //case "acceptCookies":myElement=acceptCookies;break;
             case "addBTN":myElement=addBTN;break;
             case "save":myElement=save;break;
             case "closeDialog":myElement=closeDialog;break;

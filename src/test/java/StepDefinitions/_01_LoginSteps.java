@@ -15,18 +15,19 @@ public class _01_LoginSteps {
     DialogContent dc=new DialogContent();
     @Given("Navigate to basqar")
     public void navigateToBasqar() {
-        GWD.getDriver().get("https://demo.mersys.io/");
+        GWD.getDriver().get("https://test.mersys.io/");
         GWD.getDriver().manage().window().maximize();
+        // https://demo.mersys.io/
 
     }
 
     @When("Enter username and password and click login button")
     public void enterUsernameAndPasswordAndClickLoginButton() {
 
-        dc.findAndSend("username","richfield.edu");
-        dc.findAndSend("password","Richfield2020!");
+        dc.findAndSend("username","turkeyts"); //richfield.edu
+        dc.findAndSend("password","TechnoStudy123"); //Richfield2020!
         dc.findAndClick("loginButton");
-        dc.findAndClick("acceptCookies");
+        //dc.findAndClick("acceptCookies");
 
 
     }
