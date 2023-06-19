@@ -33,8 +33,8 @@ Feature: Education Functionality
       | editButton |
 
     And User sending the keys in Dialog content
-      | nameInput | <nameInputValue> |
-      | code      | <codeValue>      |
+      | nameInput | <editNameInputValue> |
+      | code      | <editCodeValue>      |
 
     And Click on the element in the Dialog
       | save |
@@ -49,5 +49,5 @@ Feature: Education Functionality
 
 
     Examples:
-      | nameInputValue | codeValue | nameInputValue | codeValue |
-      | buKezSon1      | 6699      | buKezSon2      | 2189      |
+      | nameInputValue | codeValue | editNameInputValue | editCodeValue |
+      | buKezSon1      | 6699      | buKezSon2          | 2189          |

@@ -17,8 +17,8 @@ public class GWD {
 
     public static WebDriver driver;
 
-    private static  ThreadLocal<WebDriver> threadDriver=new ThreadLocal<>(); //WebDriver 1 WebDriver2
-    public static  ThreadLocal<String> threadBrowserName=new ThreadLocal<>(); // chrome , firefox ...
+    private static  ThreadLocal<WebDriver> threadDriver=new ThreadLocal<>();
+    public static  ThreadLocal<String> threadBrowserName=new ThreadLocal<>();
 
 
 
@@ -26,12 +26,6 @@ public class GWD {
 
     public static WebDriver getDriver()
     {
-        //Bana neler lazım
-        //1 Browser tipi lazım burada ona göre oluşturcam
-        // her bir paralel çalışan sürec için sadece o sürece özel static bir değişken lazım
-        // çünkü runner classdaki işaret edilen tüm senaryolarda aynısını çalışması lazım
-        // demekki her pipeline için (Local) ve de ona özel static bir drivera ihtiyacım var
-        //donanımdaki adı pipeline , yazılımdaki adı Thread , paralel çalışan her bir süreç
 
         Locale.setDefault( new Locale("EN"));
         System.setProperty("user.language","EN");
@@ -39,13 +33,13 @@ public class GWD {
         Logger.getLogger("").setLevel(Level.SEVERE);
         System.setProperty(org.slf4j.impl.SimpleLogger.DEFAULT_LOG_LEVEL_KEY, "Error");
 
-        if (threadBrowserName.get() == null) // paralel çalışmayan yani XML den parametreyle gelmeyen ler çağıran
-            threadBrowserName.set("chrome"); // basic arayanlar için
+        if (threadBrowserName.get() == null)
+            threadBrowserName.set("chrome");
 
 
         if (threadDriver.get() == null) {
 
-            String browserName=threadBrowserName.get(); // bu thread deki browserName yi verdi
+            String browserName=threadBrowserName.get();
             switch (browserName)
             {
                 case "chrome":
@@ -74,23 +68,23 @@ public class GWD {
 
     public static void quitDriver()
     {
-        Bekle(5);
+        wait_W(5);
 //        try {
 //            Thread.sleep(5000);
 //        } catch (InterruptedException e) {
 //            throw new RuntimeException(e);
 //        }
 
-        if (threadDriver.get() != null) { // driver varsa
+        if (threadDriver.get() != null) {
             threadDriver.get().quit();
 
             WebDriver driver=threadDriver.get();
             driver=null;
-            threadDriver.set(driver); // tekrar gelirse için boş olmuş olsun
+            threadDriver.set(driver);
         }
     }
 
-    public static void Bekle(int saniye)
+    public static void wait_W(int saniye)
     {
         try {
             Thread.sleep(saniye*1000);

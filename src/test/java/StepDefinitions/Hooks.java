@@ -19,21 +19,21 @@ public class Hooks {
     @Before
     public void before()
     {
-        System.out.println("Senaryo başladı");
+        System.out.println("The Scenario started");
     }
 
     @After
     public void after(Scenario scenario)
     {
-        System.out.println("Senaryo Bitti");
-        System.out.println("scenario sonucu="+ scenario.getStatus());
+        System.out.println("Scenario Done");
+        System.out.println("scenario result="+ scenario.getStatus());
         System.out.println("scenario isFailed ?="+ scenario.isFailed());
 
         LocalDateTime date = LocalDateTime.now();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yy");
 
         if (scenario.isFailed()){
-            // klasöre
+
             TakesScreenshot screenshot = (TakesScreenshot) GWD.getDriver();
             File ekranDosyasi = screenshot.getScreenshotAs(OutputType.FILE);
 
@@ -50,7 +50,7 @@ public class Hooks {
 
         }
 
-        // ekran görüntüsü al senaryo hatalı ise
+
         GWD.quitDriver();
     }
 

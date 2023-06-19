@@ -56,7 +56,7 @@ public class DialogContent extends Parent {
     @FindBy(xpath = "//*[text()='Campus School']")
     private WebElement mainPage;
     //************************** CSP-2 **************************//
-    @FindBy(xpath = "(//ms-edit-button[@class=\"ng-tns-c552-57 ng-star-inserted\"])[1]")
+    @FindBy(xpath = "//ms-edit-button[contains(@class,'ng-star-inserted')]//button")
     private WebElement attestationsEditBTN;
     //************************** CSP-3 **************************//
     @FindBy(xpath = "(//mat-select[@formcontrolname='attachmentStages']/div/div)[1]")
@@ -76,6 +76,8 @@ public class DialogContent extends Parent {
             private WebElement labortory;
     @FindBy(xpath = "//ms-integer-field[@formcontrolname='capacity']//input")
             private WebElement capacity;
+    @FindBy(xpath = "//mat-select[@id=\"mat-select-22\"]")
+            private WebElement classroom;
     @FindBy(xpath = "//td[contains(text(),'co+-1')]")
             private WebElement editText;
     //************************** CSP-8 **************************//
@@ -157,6 +159,7 @@ public class DialogContent extends Parent {
             //************************** CSP-4 **************************//
             case "addButton2":myElement=addButton2;break;
             //************************** CSP-7 **************************//
+            case "classroom":myElement=classroom;break;
             case "locationType":myElement=locationType;break;
             case "labortory":myElement=labortory;break;
             case "editButton":myElement=editButton;break;

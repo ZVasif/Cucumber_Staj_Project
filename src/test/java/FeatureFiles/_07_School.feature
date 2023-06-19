@@ -11,9 +11,9 @@ Feature: School Location Functionality
       | setupSchool |
       | locatoins   |
     Then Click on the element in the Dialog
-      | addBTN       |
-      | locationType |
-      | labortory    |
+      | addBTN    |
+      | classroom |
+#      | labortory    |
     And User sending the keys in Dialog content
       | nameInput | <nameValue>      |
       | shortName | <shortNameValue> |
@@ -36,7 +36,7 @@ Feature: School Location Functionality
     Then Success message should be displayed
     Examples:
       | nameValue | shortNameValue | capacityValue | editNameValue | editShortValue | editCapacityValue |
-      | co+-12     | tom+-12         | 22+-12         | po+12          | co+22           | 25+12              |
+      | co+-12    | tom+-12        | 22+-12        | po+12         | co+22          | 25+12             |
 
 
 
