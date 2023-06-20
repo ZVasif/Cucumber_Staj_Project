@@ -16,8 +16,7 @@ Feature: Discounts Functionality
       | descriptionName | <DName>  |
       | code            | <cInput> |
       | priority        | <pri>    |
-    And Click on the element in the Dialog
-      | save |
+    And Click on the element in the Dialog with action
     And Success message should be displayed
 
     And User sending the keys in Dialog content

@@ -52,7 +52,7 @@ public class LeftNav extends Parent{
     @FindBy(xpath = "//*[text()='Departments']")
             private WebElement departments;
     //**************************  CSP-9    **************************//
-    @FindBy (xpath = "    //fuse-nav-vertical-item[@class='ng-tns-c249-8 nav-item ng-star-inserted'][10]//span\n")
+    @FindBy (xpath = "//*[text()='Bank Accounts']")
     private WebElement bankAccounts;
     //*************************** CSP-10 ***************************//
     @FindBy(xpath = "//*[text()='Grade Levels']")

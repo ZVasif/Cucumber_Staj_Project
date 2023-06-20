@@ -11,15 +11,12 @@ Feature: School Location Functionality
       | setupSchool |
       | locatoins   |
     Then Click on the element in the Dialog
-      | addBTN    |
-      | classroom |
-#      | labortory    |
+      | addBTN |
     And User sending the keys in Dialog content
       | nameInput | <nameValue>      |
       | shortName | <shortNameValue> |
       | capacity  | <capacityValue>  |
-    And Click on the element in the Dialog
-      | save |
+    And Click on the element in the Dialog with action
     And Success message should be displayed
     Then Click on the element in the Dialog
       | editText |
@@ -27,8 +24,7 @@ Feature: School Location Functionality
       | nameInput | <editNameValue>     |
       | shortName | <editShortValue>    |
       | capacity  | <editCapacityValue> |
-    And Click on the element in the Dialog
-      | save |
+    And Click on the element in the Dialog with action
     And Success message should be displayed
     Then Click on the element in the Dialog
       | deletebutton       |

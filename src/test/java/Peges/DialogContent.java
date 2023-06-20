@@ -76,7 +76,7 @@ public class DialogContent extends Parent {
             private WebElement labortory;
     @FindBy(xpath = "//ms-integer-field[@formcontrolname='capacity']//input")
             private WebElement capacity;
-    @FindBy(xpath = "//mat-select[@id=\"mat-select-22\"]")
+    @FindBy(id = "mat-select-4")
             private WebElement classroom;
     @FindBy(xpath = "//td[contains(text(),'co+-1')]")
             private WebElement editText;
@@ -86,7 +86,7 @@ public class DialogContent extends Parent {
     @FindBy(xpath = "//td[contains(text(),'Univer')]")
     private WebElement editTextDepartment;
     //**************************  CSP-9    **************************//
-    @FindBy (xpath = "//ms-masked-text-field[@formcontrolname='iban']//input")
+    @FindBy (xpath = "//ms-text-field[@formcontrolname='iban']//input")
     private WebElement iban;
     @FindBy(xpath = "//mat-select[@formcontrolname='currency']//span")
     private WebElement currency;
